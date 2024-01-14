@@ -69,6 +69,19 @@
     font: inherit;
     vertical-align: baseline;
 }
+*::-webkit-scrollbar {
+    width: 8px;
+  }
+*::-webkit-scrollbar-track {
+   background: #EDEDF0;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #85899D;
+}
+*{
+    scrollbar-width: thin;
+    scrollbar-color: #85899D #EDEDF0;
+}
 body{
     font-size: 120%;
     color: #85899D;
