@@ -7,7 +7,7 @@
 </head>
 <div class="site">
     <header class="header">
-        <div class="header__container container container--flex">
+        <div class="container container--header container--flex">
                 <div class="header__logo">
                     <a href="">
                         <picture>
@@ -49,7 +49,7 @@
         <div class="banner">
             <img class="banner__img" src="img/header_rus.png" alt="">
         </div>
-        <div class="main__container container">
+        <div class="container container--main">
             <div class="main-breadcrumps">
                 Site path
             </div>
@@ -120,9 +120,37 @@
         </div>
     </main>
     <footer class="footer">
-        <div class="footer__container container">
-            <div class="footer__copyright">
-                SSUGT
+        <div class="container--footer container">
+            <div class="footer__logo">
+                <picture>
+                    <source srcset="img/header_logo_RU1.png" media="(min-width: 1240px)">
+                    <img class="footer__img" src="img/header_logo_RU1.png" alt="logo">
+                </picture>
+            </div>
+            <div class="footer-info">
+                <div class="footer__adress">
+                    <div class="footer-info-title">
+                        Адрес
+                    </div>
+                    <div class="footer-info-text">
+                        630108, г. Новосибирск,<br>
+                        ул. Плахотного, 10, каб. 436
+                    </div>                       
+                </div>
+                <div class="footer__contacts">
+                    <div class="footer-info-title">
+                        Региональный информационный центр
+                    </div>
+                    <div class="footer-info-text">
+                        <a class="footer__link" href="tel:+73833610566">+7 (383) 361-05-66</a>
+                        <a class="footer__link" href="mailto:vestnik@ssga.ru">vestnik@ssga.ru</a>
+                    </div>                   
+                </div>
+            </div>
+        </div>
+        <div class="footer-copy">
+            <div class="container container--copy">
+                ©2024 Сибирский государственный университет геосистем и технологий
             </div>
         </div>
     </footer>
