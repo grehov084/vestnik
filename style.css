@@ -244,16 +244,21 @@ body{
     display: flex;
     flex-direction: column;
     gap: 15px;
-    padding: 0 0 15px 15px;
+    padding: 0 0 0 15px;
+    height: 0;
+    overflow: hidden;
 }
 .site-menu-title{
     text-align: center;
-    margin-bottom: 15px;
     background-color: #009fe3;
     color: #fff;
     padding: 10px 10px;
     text-transform: uppercase;
     white-space: nowrap;
+}
+.site-menu-title--readers,
+.site-menu-title--authors{
+    margin-bottom: 15px;
 }
 .main-content__title h1{
     font-size: 36px;
@@ -319,14 +324,15 @@ body{
 .header-mobile{
     background-color: #fff;
     position: absolute;
-    top: 100px;
+    top: -270px;
+    left: 0;
     width: 100%;
-    display: none;
+    display: block;
 }
 .header-mobile-content{
     padding: 25px 0;
 }
-.header-mobile-close{
+.header-mobile-burger{
     width: max-content;
     margin-right: 25px;
 }
@@ -354,6 +360,44 @@ body{
 }
 .lang--center{
     justify-content: center;
+}
+.burger-btn span i {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #4b4b4b;
+    -webkit-transition: background-color 0s 0.15s, opacity 0.15s 0.15s;
+    -o-transition: background-color 0s 0.15s, opacity 0.15s 0.15s;
+    transition: background-color 0s 0.15s, opacity 0.15s 0.15s;
+}
+.burger-btn span::before, .burger-btn span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #4b4b4b;
+    -webkit-transition: background-color 0.3s, top 0.15s 0.15s, -webkit-transform 0.15s;
+    transition: background-color 0.3s, top 0.15s 0.15s, -webkit-transform 0.15s;
+    -o-transition: background-color 0.3s, top 0.15s 0.15s, transform 0.15s;
+    transition: background-color 0.3s, top 0.15s 0.15s, transform 0.15s;
+    transition: background-color 0.3s, top 0.15s 0.15s, transform 0.15s, -webkit-transform 0.15s;
+}
+.burger-btn span {
+    display: block;
+    position: relative;
+    width: 22px;
+    height: 3px;
+}
+.burger-btn span::before{
+    top: -8px;
+}
+.burger-btn span::after{
+    top: 8px;
 }
 @media(max-width: 1450px){
     .main-content{
@@ -386,6 +430,22 @@ body{
     .header-mobile,
     .header-mobile-top{
         display: none;
+    }
+}
+@media(min-width: 768px){
+    .burger-btn {
+        width: 27px;
+        height: 30px;
+    }
+    .burger-btn span {
+        width: 25px;
+        height: 3px;
+    }
+    .burger-btn span::before {
+        top: -8px;
+    }
+    .burger-btn span::after {
+        top: 8px;
     }
 }
 @media(max-width: 760px){
