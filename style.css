@@ -130,7 +130,7 @@ body{
     width: 100%;
 }
 .main-breadcrumps{
-    padding-top: 20px;
+    padding: 20px 10px;
     color: #009fe3;
 }
 .header__logo{
@@ -245,7 +245,6 @@ body{
     flex-direction: column;
     gap: 15px;
     padding: 0 0 0 15px;
-    height: 0;
     overflow: hidden;
 }
 .site-menu-title{
@@ -255,6 +254,9 @@ body{
     padding: 10px 10px;
     text-transform: uppercase;
     white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .site-menu-title--readers,
 .site-menu-title--authors{
@@ -328,12 +330,17 @@ body{
     left: 0;
     width: 100%;
     display: block;
+    transition-duration: 0.7s;
+    z-index: -1;
 }
 .header-mobile-content{
     padding: 25px 0;
 }
 .header-mobile-burger{
     width: max-content;
+    height: 33px;
+    display: flex;
+    cursor: pointer;
     margin-right: 25px;
 }
 .header-menu-mob__link{
@@ -387,6 +394,11 @@ body{
     transition: background-color 0.3s, top 0.15s 0.15s, transform 0.15s;
     transition: background-color 0.3s, top 0.15s 0.15s, transform 0.15s, -webkit-transform 0.15s;
 }
+.burger-btn{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
 .burger-btn span {
     display: block;
     position: relative;
@@ -398,6 +410,10 @@ body{
 }
 .burger-btn span::after{
     top: 8px;
+}
+.site-menu-title-toggle{
+    width: max-content;
+    display: none;
 }
 @media(max-width: 1450px){
     .main-content{
@@ -423,6 +439,7 @@ body{
 }
 @media(max-width: 1240px){
     .container--header{
+        background: #fff;
         padding: 0;
     }
 }
@@ -453,8 +470,8 @@ body{
         width: 100%;
     }
     .main-content{
-        grid-template-areas: "site-content__title"
-                             "site-menu"
+        grid-template-areas: "site-menu"
+                             "site-content__title"
                              "site-content__main";
         grid-template-columns: 100%;
     }
@@ -476,6 +493,21 @@ body{
     }
     .footer__contacts{
         margin-top: 20px;
+    }
+    .site-menu-content{
+        height: 0;
+        transition: 0.5s;
+    }
+    .site-menu-title{
+        cursor: pointer;
+    }
+    .journal{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .site-menu-title-toggle{
+       display: block;
     }
 }
 @media screen {
