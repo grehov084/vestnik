@@ -484,7 +484,6 @@ body{
         width: 25px;
         height: 3px;
     }
-
 }
 @media(min-width: 760px){
     .site-menu-title--readers{
@@ -558,6 +557,11 @@ body{
     }
     .lang{
         width: 75px;
+    }
+}
+@media(max-width: 340px){
+    .search-input{
+        padding: 0 5px !important;
     }
 }
 @media screen {
