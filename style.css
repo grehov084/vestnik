@@ -224,6 +224,7 @@ body{
     gap: 10px;
     justify-content: end;
     align-items: center;
+    margin-right: 25px;
 }
 .contacts{
     display: flex;
@@ -357,7 +358,6 @@ body{
     height: 33px;
     display: flex;
     cursor: pointer;
-    margin-right: 25px;
 }
 .header-menu-mob__link{
     text-decoration: none;
@@ -420,12 +420,17 @@ body{
     position: relative;
     width: 22px;
     height: 3px;
+    --rotateUp: 0;
+    --rotateDown: 0;
+    --top: 8px;
 }
 .burger-btn span::before{
-    top: -8px;
+    top: calc(var(--top) * (-1));
+    transform: rotate(var(--rotateUp));
 }
 .burger-btn span::after{
-    top: 8px;
+    top: var(--top);
+    transform: rotate(var(--rotateDown));
 }
 .site-menu-title-toggle{
     width: max-content;
@@ -479,12 +484,7 @@ body{
         width: 25px;
         height: 3px;
     }
-    .burger-btn span::before {
-        top: -8px;
-    }
-    .burger-btn span::after {
-        top: 8px;
-    }
+
 }
 @media(min-width: 760px){
     .site-menu-title--readers{
@@ -534,6 +534,30 @@ body{
     }
     .site-menu-title-toggle{
        display: block;
+    }
+    .main-content__title{
+        margin-top: 25px;
+    }
+    .footer__adress{
+        width: 100%;
+    }
+}
+@media(max-width: 500px){
+    .journal__img{
+        width: 100%;
+    }
+}
+@media(max-width: 390px){
+    .main-content__title h1{
+        font-size: 28px;
+    }
+}
+@media(max-width: 375px){
+    .footer__img{
+        max-width: 240px;
+    }
+    .lang{
+        width: 75px;
     }
 }
 @media screen {

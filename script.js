@@ -1,4 +1,4 @@
-let headerMobile, clickedElem, authors, readers, content, body, height, toggle, toggleUp, header, banner;
+let headerMobile, clickedElem, authors, readers, content, body, height, toggle, toggleUp, header, banner, burgerElem, burgerElemBefore;
 headerMobile = document.querySelector(".header-mobile");
 header = document.querySelector(".header");
 authors = document.querySelector(".site-menu--authors");
@@ -6,6 +6,8 @@ readers = document.querySelector(".site-menu--readers");
 body = document.querySelector("body");
 toggleUp = document.querySelector(".site-up");
 banner = document.querySelector(".banner");
+burgerElem = document.querySelector(".burger-btn").children[0];
+console.log(burgerElem);
 function fadeIn(el, timeout, display){
     if(el.style.opacity == 0){
         el.style.opacity = 0;
@@ -31,12 +33,21 @@ function openElem(clickedElem){
             if(!headerMobile.hasAttribute("style")){
                 headerMobile.style.transform = "translate(0, 330px)";
                 body.style.overflow = "hidden";
+                burgerElem.children[0].style.display = "none";
+                burgerElem.style.setProperty("--rotateUp", "45deg");
+                burgerElem.style.setProperty("--rotateDown", "-45deg");
+                burgerElem.style.setProperty("--top", "0");
             }
             else{
                 headerMobile.style.cssText = "transform: translate(0, -270px)";
                 setTimeout(() => {
                     headerMobile.removeAttribute("style");
                 }, 500);
+                burgerElem.style.display = "block";
+                burgerElem.children[0].style.display = "block";
+                burgerElem.style.setProperty("--rotateUp", "0");
+                burgerElem.style.setProperty("--rotateDown", "-0");
+                burgerElem.style.setProperty("--top", "8px");
                 body.removeAttribute("style");
             }
         }
