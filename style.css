@@ -208,6 +208,7 @@ body{
     position: sticky;
     top: 0;
     background-color: #fff;
+    transition: 0.2s;
 }
 .header-content{
     display: flex;
@@ -239,6 +240,21 @@ body{
     text-align: center;
     font-weight: bold;
     grid-area: site-content__title;
+}
+.site-up{
+    width: 70px;
+    height: 70px;
+    background-color: #009fe3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    position: fixed;
+    top: 90%;
+    right: 240px;
+    cursor: pointer;
+    opacity: 0;
 }
 .site-menu-content{
     display: flex;
@@ -415,6 +431,11 @@ body{
     width: max-content;
     display: none;
 }
+@media(max-width: 1600px){
+    .site-up{
+        right: 25px;
+    }
+}
 @media(max-width: 1450px){
     .main-content{
         padding: 0 10px;
@@ -423,7 +444,7 @@ body{
         padding: 38px 0;
     }
     .header-content{
-        padding: 0 4px;
+        padding: 0 15px;
     }
 }
 @media(max-width: 1240px){
