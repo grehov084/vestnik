@@ -103,6 +103,9 @@ body{
     line-height: 1.5;
     color: #4b4b4b;
 }
+.about__text:nth-child(1){
+    font-weight: bold;
+}
 .about__list{
     padding-left: 25px;
     font-family: "Raleway", sans-serif;
@@ -166,13 +169,16 @@ body{
 .header-menu__link{
     font-weight: 500;
 }
-.contacts__link{
-    color: #85899D;
-}
 .lang__link{
     text-decoration: none;
     color: #000;
     font-size: 18px;
+}
+.journal{
+    border: 2px solid #bdbbbb;
+}
+.journal__img{
+    max-width: 340px;
 }
 .header-top{
     display: flex;
@@ -227,6 +233,7 @@ body{
     top: 0;
     background-color: #fff;
     transition: 0.2s;
+    z-index: 1;
 }
 .header-content{
     display: flex;
@@ -252,12 +259,14 @@ body{
     border-top: 1px solid rgba(52, 52, 51, 0.15);
 }
 .main-content__title{
-    text-transform: uppercase;
     padding: 0 0 10px;
     margin-bottom: 25px;
     text-align: center;
     font-weight: bold;
     grid-area: site-content__title;
+}
+.main-content__title h1{
+    font-family: "Raleway" !important;
 }
 .site-up{
     width: 70px;
@@ -305,6 +314,7 @@ body{
     flex-wrap: wrap;
     gap: 15px;
     grid-area: site-content__main;
+    justify-content: end;
 }
 .site-menu{
     grid-area: site-menu;
@@ -323,6 +333,7 @@ body{
     max-width:  100%;
     padding: 0 25px;
     font-size: 120%;
+    position: relative;
 }
 .description{
     width: 100%;
@@ -465,6 +476,14 @@ body{
     .container--copy{
         padding: 0 10px;
     }
+}
+@media(min-width: 1440px){
+    .about{
+        right: 95px;
+    }
+}
+@media(max-width: 1320px){
+
 }
 @media(max-width: 1240px){
     .content-header{
