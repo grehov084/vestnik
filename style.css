@@ -89,6 +89,10 @@ body{
     font-feature-settings: "lnum";
     width: 100%;
 }
+.site{
+    width: 100%;
+    max-width: 100%;
+}
 .main__text,
 .description__text,
 .about__text{
@@ -134,10 +138,11 @@ body{
     color: #009fe3;
 }
 .header__logo{
-    width: max-content;
+    width: 100%;
+    max-width: 324px;
 }
 .header__img{
-    max-width: 85%;
+    width: 100%;
 }
 .footer__img{
     max-width: 342px;
@@ -152,9 +157,18 @@ body{
 .header-menu__item{
     white-space: nowrap;
 }
-.header-menu__link, .lang__link{
+.header-menu__link, .contacts__link{
     text-decoration: none;
     color: #000;
+    font-size: 16px;
+}
+.contacts__link{
+    color: #85899D;
+}
+.lang__link{
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
 }
 .header-top{
     display: flex;
@@ -224,7 +238,6 @@ body{
     gap: 10px;
     justify-content: end;
     align-items: center;
-    margin-right: 25px;
 }
 .contacts{
     display: flex;
@@ -378,9 +391,7 @@ body{
 .header-menu-mob__item{
     background: #797979;
 }
-.content-header--mob{
-    display: block !important;
-}
+
 .lang--center{
     justify-content: center;
 }
@@ -441,15 +452,17 @@ body{
         right: 25px;
     }
 }
+@media(max-width: 1480px){
+    .container{
+        max-width: 98%;
+    }
+}
 @media(max-width: 1450px){
-    .main-content{
-        padding: 0 10px;
-    }
     .container--footer{
-        padding: 38px 0;
+        padding: 38px 10px;
     }
-    .header-content{
-        padding: 0 15px;
+    .container--copy{
+        padding: 0 10px;
     }
 }
 @media(max-width: 1240px){
@@ -459,20 +472,38 @@ body{
     .header__img{
         max-width: 100%;
     }
-    .header-content{
-        border-bottom: 2px solid #ededed;
+    .container--header{
+        padding: 0 10px !important;
     }
-}
-@media(max-width: 1240px){
+    .content-header{
+        display: none;
+    }
+    .content-header--mob{
+        display: block;
+    }
     .container--header{
         background: #fff;
         padding: 0;
+    }
+    .header__logo{
+        width: unset;
+    }
+    .container{
+        width: unset;
     }
 }
 @media(min-width: 1240px){
     .header-mobile,
     .header-mobile-top{
         display: none;
+    }
+    .content-header--mob{
+        display: none;
+    }
+}
+@media(max-width: 1140px){
+    .footer__contacts{
+        margin-left: 20px;
     }
 }
 @media(min-width: 768px){
@@ -513,11 +544,9 @@ body{
     .container--copy{
         text-align: center;
     }
-    .content-header{
-        display: none;
-    }
     .footer__contacts{
         margin-top: 20px;
+        margin-left: 0;
     }
     .site-menu-content{
         height: 0;

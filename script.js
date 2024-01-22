@@ -123,7 +123,6 @@ document.addEventListener("click", function(e){
     }
 });
 window.addEventListener("scroll", ()=>{
-    if(window.innerWidth > 1240){
         if(window.scrollY != 0){
             if(!header.hasAttribute("style")){
                 header.style.cssText = "box-shadow: 0px 5px 2px #ededed;";
@@ -132,7 +131,6 @@ window.addEventListener("scroll", ()=>{
         else{
             header.removeAttribute("style");
             }
-    }
     if(window.pageYOffset != 0 || !toggleUp.style.display == "none"){
         fadeIn(toggleUp, 250);
     }
