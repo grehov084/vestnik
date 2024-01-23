@@ -576,9 +576,10 @@ body{
         cursor: pointer;
     }
     .journal{
-        width: 100%;
+        width: max-content;
         display: flex;
         justify-content: center;
+        margin: 0 auto;
     }
     .site-menu-title-toggle{
        display: block;
