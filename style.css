@@ -480,7 +480,7 @@ body{
 }
 @media(min-width: 1440px){
     .about{
-        right: 95px;
+        left: 55px;
     }
 }
 @media(max-width: 1320px){
