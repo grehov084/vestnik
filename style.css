@@ -176,6 +176,7 @@ body{
 }
 .journal{
     border: 2px solid #bdbbbb;
+    margin: 0 auto;
 }
 .journal__img{
     max-width: 340px;
