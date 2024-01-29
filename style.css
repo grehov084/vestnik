@@ -511,6 +511,9 @@ body{
     .container{
         width: unset;
     }
+    .lang{
+        margin-right: 20px;
+    }
 }
 @media(min-width: 1240px){
     .header-mobile,
@@ -596,6 +599,14 @@ body{
         width: 100%;
     }
 }
+@media(max-width: 440px){
+    .search-input{
+        padding: 0 3px !important;
+    }
+    .header__img{
+        max-width: 145px;
+    }
+}
 @media(max-width: 390px){
     .main-content__title h1{
         font-size: 28px;
@@ -607,11 +618,21 @@ body{
     }
     .lang{
         width: 75px;
+        margin-right: 10px;
+    }
+    .search-input{
+        padding: 0 !important;
+    }
+    .header__img {
+        max-width: 110px;
     }
 }
-@media(max-width: 340px){
+@media(max-width: 330px){
+    .lang--center{
+        justify-content: space-around;
+    }
     .search-input{
-        padding: 0 5px !important;
+        font-size:  15px !important;;
     }
 }
 @media screen {
